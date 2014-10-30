@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title> Atolo - Responsive Single Page Template</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/bootstrap-responsive.css"  type="text/css" media="screen">
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/colors.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="js/prettyphoto/css/prettyPhoto.css"  type="text/css" media="all" />
+  <link rel="stylesheet" href="css/add.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="js/jquery-ui-dialog/jquery-ui.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="js/wow/css/libs/animate.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="js/ed-lea-jquery-collagePlus/css/transitions.css" type="text/css" media="all" />
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,800' rel='stylesheet' type='text/css' />
+
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="images/favicon.ico">
+
+	  <script type="text/javascript" src="js/jquery.js"></script>
+	  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+      <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+      <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+      <script type="text/javascript" src="js/jquery.form.js"></script>
+      <script type="text/javascript" src="js/prettyphoto/js/jquery.prettyPhoto.js"></script>
+      <script type="text/javascript" src="js/init.js"></script>
+      <script type="text/javascript" src="js/wow/dist/wow.min.js"></script>
+      <script type="text/javascript" src="js/ed-lea-jquery-collagePlus/js/jquery.collageCaption.min.js"></script>
+      <script type="text/javascript" src="js/ed-lea-jquery-collagePlus/js/jquery.collagePlus.min.js"></script>
+      <script type="text/javascript" src="js/ed-lea-jquery-collagePlus/js/jquery.removeWhitespace.min.js"></script>
+      <script type="text/javascript" src="js/add.js"></script>
+
+    </head>
+
+    <body>
+    
+	<script type="text/javascript">
+		wow = new WOW(
+			{
+				animateClass: 'animated',
+				offset:       100
+			}
+		);
+		wow.init();
+		
+		$(window).load(function () {
+			$('.Collage').removeWhitespace().collagePlus();
+		});
+
+	/* グリッドレイアウト */
+    // All images need to be loaded for this plugin to work so
+    // we end up waiting for the whole window to load in this example
+    $(window).load(function () {
+        $(document).ready(function(){
+            collage();
+            $('.Collage').collageCaption();
+        });
+    });
+    // Here we apply the actual CollagePlus plugin
+    function collage() {
+        $('.Collage').removeWhitespace().collagePlus(
+            {
+                'fadeSpeed'     : 2000,
+                'targetHeight'  : 200
+            }
+        );
+    };
+    // This is just for the case that the browser window is resized
+    var resizeTimer = null;
+    $(window).bind('resize', function() {
+        // hide all the images until we resize them
+        $('.Collage .Image_Wrapper').css("opacity", 0);
+        // set a timer to re-apply the plugin
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(collage, 200);
+    });
+	</script>
+
+     <div id="top" class="allC">
+
+      <header class="top-header clearfix">
+
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+
+             <div id="logo"><a href="#top"><img src="images/ugatria/ugatria.png" alt=""/></a></div>
+             <ul id="menu-my-menu" class="menu">
+				<li><a href="#top">HOME</a></li>
+				<li><a href="#president">代表挨拶</a></li>
+				<li><a href="#job_information">求人情報</a></li>
+				<li><a href="#information">企業情報</a></li>
+				<li><a href="#referral">先輩社員</a></li>
+				<li><a href="#landscape">社内風景</a></li>
+				<li><a href="#contact">会社説明会</a></li>
+				<li><a href="http://www.ugatria.co.jp/entry.php">エントリー</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--BEGIN SECTION HOME-->
+
+    <section id="home" class="mutualWrap sectP">
+      <div id="section" class="flexslider-home">
+        <ul id="welcom" class="slides perspective inner">
+         <li class="contents">
+           <img src="images/ugatria/top.png" alt="" />
+           <div class="flex-caption">
+             <!-- div class="caption-block">
+               <h1>Welcome to Ugatria</h1>
+               <h4>このページはサンプルページです</h4>
+             </div -->
+           </div>
+         </li>
+       </ul>
+     </div><!--end flexslider-->
+   </section><!--end-home-->
+
+   <!--END SECTION HOME-->
+
+<!-- BEGIN SECTION PRESIDENT -->
+<section id="president" class="mutualWrap sectP">
+	<div class="container">
+		<div class="row wow fadeInDown animated" data-wow-delay="0.2s">
+			<div class="span12">
+        <h2 class="section-title">頑張っている皆様へ</h2>
+				<h3 id="blue" class="section-quote">"Greetings"<span> -代表挨拶</span></h3>
+				<div class="row">
+					<div class="span12 greetings">
+						<p>
+							<span id="blue" class="dropcap">皆</span>
+								さん、初めましてウガトリアの代表をしております、河野（かわの）と申します。私たちウガトリアは、情報技術を活用して人と人の心を丁寧につなぎ、心の豊かさがある社会を創造したいと思ってます。そのためには、「失敗」をポジティブに捉えながらチャレンジし続けなければなりません。企業も人も成長するには、「失敗」は必ず必要ですよね。その「失敗」を「失敗」で終わらせないことが大事だと思います。是非、一緒に前を向いて、いつどんな時でも生きていることを楽しむことを忘れずにウガトリアで働いてみませんか？とにかく、一度会いにきてください。人生の中で3本の指に入るくらいの衝撃的なご縁になりますよ！皆さんにお会いできることを楽しみにしております！
+            </p>
+            <p style="text-align:right; font-weight:bold;">
+                代表取締役CEO　河野 敦
+						</p>
+					</div><!--end span6-->
+				</div><!--end row -->
+			</div><!--end span12-->
+		</div><!--end row -->
+	</div><!--end container-->
+</section>
+<!-- END SECTION PRESIDENT -->
+
+   <!--BEGIN SECTION ABOUT-->
+   <section id="job_information" class="mutualWrap sectP">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class="section-title wow fadeInDown animated">求人情報</h2>
+
+         <!--row TEAM -->
+
+          <div class="row wow pulse animated">
+            <div class="span12 post no-b">
+              <div class="post-container">
+                <h4 class="post-title no-b">
+                  <div href="page-blog-single.html" style="color:white;">新卒採用</div>
+                </h4>
+                <div class="published no-b recruit">
+					<ul>
+						<li>  
+							<span class="recruit_before">募集職種</span>
+							<span class="recruit_after">プログラマ</span>
+						</li>
+						<li>
+							<span class="recruit_before">募集目的</span>
+							<span class="recruit_after">業務拡大のため、志ある同志を増やすため</span>
+						</li>
+						<li>
+							<span class="recruit_before">仕事内容</span>
+							<span class="recruit_after">企業向け業務システム、WEBシステム、</span>
+						</li>
+						<li>
+							<span class="recruit_before">&nbsp;</span>
+							<span class="recruit_after">タブレット向けアプリケーション開発</span>
+						</li>
+						<li>
+							<span class="recruit_before">勤務地</span>
+							<span class="recruit_after">本社</span>
+						</li>
+						<li>
+							<span class="recruit_before">勤務時間</span>
+							<span class="recruit_after">9:30〜18:30</span>
+						</li>
+						<li>
+							<span class="recruit_before">賃金</span>
+							<span class="recruit_after">専門卒 180,000円～200,000円</span>
+						</li>
+						<li>
+							<span class="recruit_before">&nbsp;</span>
+							<span class="recruit_after">大学卒 180,000円～220,000円</span>
+						</li>
+						<li>
+							<span class="recruit_before">手当</span>
+							<span class="recruit_after">通勤手当(上限30,000円)</span>
+						</li>
+						<li>
+							<span class="recruit_before">雇用形態</span>
+							<span class="recruit_after">正社員</span>
+						</li>
+						<li>
+							<span class="recruit_before">応募資格</span>
+							<span class="recruit_after">情報系の専門学校 または、短期大学、4年制大学を卒業予定の方</span>
+						</li>
+						<li>
+							<span class="recruit_before">&nbsp;</span>
+							<span class="recruit_after">経済産業省認定 基本情報技術者試験を取得されている方</span>
+						</li>
+						<li>
+							<span class="recruit_before">休日</span>
+							<span class="recruit_after">土日、祝日、年末年始、夏期休暇、有給休暇</span>
+						</li>
+						<li>
+							<span class="recruit_before">研修制度</span>
+							<span class="recruit_after">入社前研修(3ヵ月) -> 入社後研修(3ヵ月) -> OJT</span>
+						</li>
+					</ul>
+                </div>
+                <div class="read-more">
+                  <a href="http://www.ugatria.co.jp/entry.php">エントリーする</a>
+                </div>
+              </div>
+            </div><!--end post-->
+          </div><!--end row-->
+          <div class="row wow pulse animated">
+            <div class="span12 post no-b">
+              <div class="post-container">
+                <h4 class="post-title no-b">
+                  <div href="page-blog-single.html" style="color:white;">中途採用</div>
+                </h4>
+                <div class="published no-b recruit">
+                  <ul>
+						<li>  
+							<span class="recruit_before">募集職種</span>
+							<span class="recruit_after">プログラマ、システムエンジニア、プロジェクト補佐、WEBデザイナー</span>
+						</li>
+						<li>
+							<span class="recruit_before">募集目的</span>
+							<span class="recruit_after">業務拡大のため、志ある同志を増やすため</span>
+						</li>
+						<li>
+							<span class="recruit_before">仕事内容</span>
+							<span class="recruit_after">企業向け業務システム、WEBシステム、</span>
+						</li>
+						<li>
+							<span class="recruit_before">&nbsp;</span>
+							<span class="recruit_after">タブレット向けアプリケーション開発</span>
+						</li>
+						<li>
+							<span class="recruit_before">勤務地</span>
+							<span class="recruit_after">本社 または 都内</span>
+						</li>
+						<li>
+							<span class="recruit_before">勤務時間</span>
+							<span class="recruit_after">9:30〜18:30</span>
+						</li>
+						<li>
+							<span class="recruit_before">賃金</span>
+							<span class="recruit_after">スキルに応じて相談</span>
+						</li>
+						<li>
+							<span class="recruit_before">手当</span>
+							<span class="recruit_after">通勤手当(上限30,000円)</span>
+						</li>
+						<li>
+							<span class="recruit_before">雇用形態</span>
+							<span class="recruit_after">正社員、契約社員、アルバイト</span>
+						</li>
+						<li>
+							<span class="recruit_before">応募資格</span>
+							<span class="recruit_after">1年以上の業界経験者の方</span>
+						</li>
+						<li>
+							<span class="recruit_before">&nbsp;</span>
+							<span class="recruit_after">経済産業省認定 基本情報技術者試験を取得されている方</span>
+						</li>
+						<li>
+							<span class="recruit_before">休日</span>
+							<span class="recruit_after">土日、祝日、年末年始、夏期休暇、有給休暇</span>
+						</li>
+					</ul>
+                </div>
+                <div class="read-more">
+                  <a href="http://www.ugatria.co.jp/entry_change.php">エントリーする</a>
+                </div>
+              </div>
+            </div><!--end post-->
+          </div><!--end row-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- 会社概要 -->  
+<!--BEGIN SECTION INFORMATION-->
+<section id="information" class="mutualWrap sectP wow bounceInLeft animated">
+	<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="icon">
+					<h2 class="section-title">会社概要</h2>
+				</div><!--end icon -->
+        <div class="row post">
+          <div class="span6 post no-b">
+            <a href="page-blog-single.html">
+              <div class="post-img">
+                <img width="770" height="300" src="images/blog/blog-1.jpg" alt="Culpa i officia deserunt" title="" />
+                  <div class="mask">
+                    <div class="mask-elem">
+                      <img src="images/more-img.png" alt="more" />
+                    </div>
+                  </div><!--end mask-->
+              </div><!--end post-img-->
+            </a>
+          </div>
+          <div class="span6 post no-b">
+            <div class="post-container">
+              <h4 class="post-title no-b">
+                <a href="page-blog-single.html">Porta felis rutrum eget</a>
+              </h4>
+              <div class="published no-b">
+                March 12th, 2013 | <a href="#" title="View all posts in News" rel=" tegory">News</a> | <a href="#" title="Comment on Porta felis rutrum et ">No comments</a>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mmodo   sapien felis. Pellentes faucibus sollicitudin ante, at porta lis rutrum...  </p>
+            </div>
+            <div class="read-more">
+              <a href="page-blog-single.html">Read More</a>
+            </div>
+          </div><!--end post-->
+        </div>
+
+			</div><!--end span12-->
+		</div><!--end row-->
+	</div><!--end container-->
+  </div><!--end row -->
+</section><!--end-about-->
+
+<!--END SECTION ABOUT-->
+
+<!--BEGIN SECTION REFER-->
+<section id="referral" class="mutualWrap sectP wow bounceInLeft animated">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+       <h2 class="section-title">先輩社員紹介</h2>
+      <div id="workSample" class="row">
+        <div class="span4 work-item landscape">
+          <div class="squareM">
+            <div class="diamond-content">
+              <img width="350" height="350" src="images/ugatria/employee_2_mini.png" alt="" title="" />
+              <div class="work-more"><div class="mask-elem">
+                <ul>
+                  <li>
+					<a class="lightbox" href="html/employee_3.html?iframe=true&width=85+%25&height=80+%25" rel="prettyPhoto" title="">
+                  		<img src="images/ugatria/black.png" alt="村田 綾香 (2014年度入社)" />
+                  	</a>
+                  </li>
+                </ul>
+              </div>
+            </div><!--end work-more-->
+          </div>
+        </div><!--end diamond-->
+        <h4 class="item-name">1年目</h4>
+      </div>
+
+      <div class="span4 work-item landscape">
+        <div class="squareM">
+          <div class="diamond-content">
+            <img width="350" height="350" src="images/ugatria/comingSoon.png" alt="" title="" />
+            <div class="work-more"><div class="mask-elem">
+				<li>
+					<a class="lightbox" href="html/employee_2.html?iframe=true&width=85+%25&height=80+%25" rel="prettyPhoto" title="">
+						<img src="images/ugatria/black.png" alt="高橋 陸 (2013年度入社)" />
+					</a>
+				</li>
+              </ul>
+            </div>
+          </div><!--end work-more-->
+        </div>
+      </div><!--end diamond-->
+      <h4 class="item-name">2年目</h4>
+    </div>
+
+    <div class="span4 work-item landscape ">
+      <div class="squareM">
+        <div class="diamond-content">
+          <img width="350" height="350" src="images/ugatria/employee_1_mini.png" alt="" title="" />
+          <div class="work-more"><div class="mask-elem">
+			<ul>
+				<li>
+					<a class="lightbox" href="html/employee_1.html?iframe=true&width=85+%25&height=80+%25" rel="prettyPhoto" title="">
+						<img src="images/ugatria/black.png" alt="中村 誠 (2000年度入社)" />
+					</a>
+				</li>
+			</ul>
+          </div>
+        </div><!--end work-more-->
+      </div>
+    </div><!--end diamond-->
+    <h4 class="item-name">5年目</h4>
+  </div>
+</div><!--end workSample-->
+</div><!--end span12 -->
+</div><!--end row -->
+</div><!--end container -->
+</section><!--end-portfolio-->
+<!--END SECTION REFER-->
+<!-- END REFER -->
+
+
+<!--BEGIN SECTION LANDSCAPE-->
+
+<section id="landscape" class="mutualWrap sectP wow bounceInLeft animated">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<h2 class="section-title">社内風景</h2>
+				<ul id="work-filter">
+					<li><a href="#" data-filter="*">全て</a></li>
+					<li><a href="#" data-filter=".landscape">社内風景</a></li>
+					<li><a href="#" data-filter=".event">イベント</a></li>
+				</ul>
+			
+				<div class="Collage">
+					<div class="Image_Wrapper"  data-caption="ひとこと。">
+						<a>
+							<img src="images/ugatria/office_7.png" style="width:400; height:300;" />
+						</a>
+						<div class="Caption" style="position: relative; top: 0px;">
+							<div class="Caption_Background" style="opacity: 0.5; position: relative; top: 0px; height:56px; background-color: black;"></div>
+							<div class="Caption_Content" style="position: relative; top: -56px;">
+								ひとこと。
+							</div>
+						</div>
+					</div>
+					<div class="Image_Wrapper" data-caption="ひとこと。">
+						<a>
+							<img src="images/ugatria/office_9.png" width="300" height="150" />
+						</a>
+						<div class="Caption" style="position: relative; top: 0px;">
+							<div class="Caption_Background" style="opacity: 0.5; position: relative; top: 0px; height:56px; background-color: black;"></div>
+							<div class="Caption_Content" style="position: relative; top: -56px;">
+								<span>ひとこと。</span>
+							</div>
+						</div>
+					</div>
+					<div class="Image_Wrapper" data-caption="ひとこと。">	
+						<a>
+							<img src="images/ugatria/office_3_mini.png" width="320" height="180" />
+						</a>
+						<div class="Caption" style="position: relative; top: 0px;">
+							<div class="Caption_Background" style="opacity: 0.5; position: relative; top: 0px; height:56px; background-color: black;"></div>
+							<div class="Caption_Content" style="position: relative; top: -56px;">
+								<span>ひとこと。</span>
+							</div>
+						</div>
+					</div>
+					<div class="Image_Wrapper" data-caption="ひとこと。">
+						<a>
+							<img src="images/ugatria/office_6_mini.png" width="320" height="300" />
+						</a>
+						<div class="Caption" style="position: relative; top: 0px;">
+							<div class="Caption_Background" style="opacity: 0.5; position: relative; top: 0px; height:56px; background-color: black;"></div>
+							<div class="Caption_Content" style="position: relative; top: -56px;">
+								<span>ひとこと。</span>
+							</div>
+						</div>
+					</div>
+					<div class="Image_Wrapper" data-caption="ひとこと。">
+						<a>
+							<img src="images/ugatria/employee_4.png" width="540" height="360" />
+						</a>
+						<div class="Caption" style="position: relative; top: 0px;">
+							<div class="Caption_Background" style="opacity: 0.5; position: relative; top: 0px; height:56px; background-color: black;"></div>
+							<div class="Caption_Content" style="position: relative; top: -56px;">
+								<span>ひとこと。</span>
+							</div>
+						</div>
+					</div>
+					<div class="Image_Wrapper" data-caption="ひとこと。">
+						<a>
+							<img src="images/ugatria/office_5.png" width="800" height="600" />
+						</a>
+						<div class="Caption" style="position: relative; top: 0px;">
+							<div class="Caption_Background" style="opacity: 0.5; position: relative; top: 0px; height:56px; background-color: black;"></div>
+							<div class="Caption_Content" style="position: relative; top: -56px;">
+								<span>ひとこと。</span>
+							</div>
+						</div>
+					</div>
+					<div class="Image_Wrapper" data-caption="ひとこと。">
+						<a>
+							<img src="images/ugatria/circle_3_mini.png" width="300" height="300" />
+						</a>
+						<div class="Caption" style="position: relative; top: 0px;">
+							<div class="Caption_Background" style="opacity: 0.5; position: relative; top: 0px; height:56px; background-color: black;"></div>
+							<div class="Caption_Content" style="position: relative; top: -56px;">
+								<span>ひとこと。</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--end span12 -->
+		</div><!--end row -->
+	</div><!--end container -->
+</section><!--end-portfolio-->
+<!--END SECTION LANDSCAPE-->
+<!-- END LANDSCAPE -->
+
+<!-- BEGIN CLIENTS -->
+
+
+<!-- BEGIN SOCIAL MEDIA -->
+
+
+<!--BEGIN SECTION CONTACT-->
+<section id="contact" class="mutualWrap sectP wow bounceInRight animated">
+  
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+
+        <h2 class="section-title">会社説明会</h2>
+
+        <div class="row">
+
+            </div><!--end row offices -->
+
+            <div class="row contact-form">
+
+              <form method="post" id="my-form" action='include/contact-process.php'>
+
+               <div class="span7">
+                <textarea name="message" id="message2" cols="100%" rows="11" tabindex="4"></textarea>
+                <div id="output"></div>
+              </div>
+
+              <div class="span5">
+                <input type="text" name="author" id="author" class="comm-field"  value="氏名" size="22" tabindex="1" onFocus="if(this.value=='Name')this.value='';" onBlur="if(this.value=='')this.value='Name';" />
+                <input type="text" name="email" id="email" class="comm-field" value="メールアドレス" size="22" tabindex="2" onFocus="if(this.value=='Email')this.value='';" onBlur="if(this.value=='')this.value='Email';"  />
+                <input type="text" name="title" id="title" class="comm-field" value="題名" size="22" tabindex="3" onFocus="if(this.value=='Subject')this.value='';" onBlur="if(this.value=='')this.value='Subject';" />
+                <input name="submit" type="submit" id="submit" tabindex="5" value="応募する " />
+              </div>
+
+            </form>
+
+
+          </div><!--end row contact-form -->
+          <p class="copyright">&copy; 2014 Ugatria Corporation.</p>
+
+        </div><!--end span12 -->
+      </div><!--end row -->
+    </div><!--end container -->
+  </section><!--end-contact-->
+
+  <!--END SECTION CONTACT-->
+
+</div><!--end allC-->
+</body>
+</html>
